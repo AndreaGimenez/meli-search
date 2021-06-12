@@ -1,0 +1,9 @@
+@import "./variables";
+
+.bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: $gap-xs;
+}
