@@ -6,4 +6,8 @@
     height: $header-height;
     background-color: $primary;
     padding: 0 $gap-xxxl;
+
+    @media (width <= $break-mobile) {
+        padding: 0;
+    }
 }

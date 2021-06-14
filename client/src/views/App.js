@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, Switch } from "react-router";
-import Header from '../components/header';
-import AppContent from '../components/app-content';
-import ResultsContainer from '../components/results-container';
-import ProductDetail from '../components/product-detail';
+import Header from '../components/Header';
+import AppContent from '../components/AppContent';
+import ResultsContainer from './ResultsContainer';
+import ItemDetail from '../components/ItemDetail';
+import ItemsList from '../components/ItemsList';
 import styles from '../sass/app.module.scss'
 
 const App = ()  => {
@@ -14,10 +15,14 @@ const App = ()  => {
                 <Switch>
                     <Route exact path="/"/>
                     <Route path="/items" exact>
-                        <ResultsContainer />
+                        <ResultsContainer>
+                            <ItemsList />
+                        </ResultsContainer>
                     </Route>
                     <Route path="/items/:id">
-                        <ProductDetail />
+                        <ResultsContainer>
+                            <ItemDetail />
+                        </ResultsContainer>
                     </Route>
                 </Switch>
             </AppContent>

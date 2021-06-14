@@ -1,21 +1,21 @@
 import {useCallback} from 'react';
-import useFetch from '../hooks/use-fetch';
+import useFetch from './use-fetch';
 import {BASE_URL} from '../constants.js';
 
-const useFetchProducts = () => {
+const useFetchItem = () => {
     const {sendRequest, response, error, loading} = useFetch();
 
-    const fetchProducts = useCallback((q) => {
-        const url = `${BASE_URL}?q=${q}`;
+    const fetchItemById = useCallback((q) => {
+        const url = `${BASE_URL}/${q}`;
         sendRequest(url, 'GET'); 
     }, [sendRequest]);
 
     return {
-        fetchProducts,
+        fetchItemById,
         response,
         error,
         loading
     };
 }
 
-export default useFetchProducts;
+export default useFetchItem;

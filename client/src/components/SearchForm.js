@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import SearchIcon from './search-icon';
+import SearchIcon from './SearchIcon';
 import {searchPlaceholder, results_url} from '../constants.js';
 import styles from '../sass/form.module.scss';
 

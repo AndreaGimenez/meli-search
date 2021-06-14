@@ -1,20 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Card from './card';
+import Card from './Card';
 import {item_description_url} from '../constants';
 import styles from '../sass/item.module.scss';
 
 const Item = ({item}) => (
     <Link 
         to={`${item_description_url}${item.id}`}
-        className={styles.link}
-    >
+        className={styles.link}>
         <Card>     
             <div className={styles.wrapper}>
-                <img src={item.picture}/>
+                <img src={item.picture} alt={`${item.name}`} />
             </div>
             <ItemDescription item={item}/>
-            <div className={styles.location}>capital federal</div>
+            <div className={styles.location}>{item.address.toLowerCase()}</div>
         </Card>
     </Link>
 );

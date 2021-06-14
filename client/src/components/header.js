@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchForm from './search-form';
-import Logo from './logo';
-import Navbar from './navbar';
+import SearchForm from './SearchForm';
+import Logo from './Logo';
+import Navbar from './Navbar';
 
 import styles from '../sass/header.module.scss';
 

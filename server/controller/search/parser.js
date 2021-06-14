@@ -10,6 +10,7 @@ const parseSearchResults = (data) => {
     data.results.forEach(result => {
         const item = getItemData(result);
         item["picture"] = result.thumbnail;
+        item["address"] = result.address.city_name;
         parsedData.items.push(item);
     });
     
