@@ -9,7 +9,7 @@ const useFetchProducts = () => {
         const url = `${BASE_URL}?q=${q}`;
         sendRequest(url, 'GET'); 
     }, [sendRequest]);
-    
+
     return {
         fetchProducts,
         response,

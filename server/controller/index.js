@@ -1,12 +1,14 @@
 const fetch = require('node-fetch');
 
+const maxItems = 4;
+
 const getSearchResults = (req, res) => {
     const query = req.query.q
-    const url = encodeURI(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`);
+    const url = encodeURI(`https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=${maxItems}`);
     fetch(url)
     .then(response => response.json())
     .then(json => {
-        formattedData=formatData(json)
+        formattedData=formatData(json);
         res.send(formattedData);
     })
     .catch(err => {
@@ -15,6 +17,7 @@ const getSearchResults = (req, res) => {
 }
 
 const formatData = (data) => {
+   
     const formattedData = {
         author: {
             name: "Andrea" ,
@@ -23,7 +26,7 @@ const formatData = (data) => {
          categories: [],
          items: [],
     }
-
+    
     data.results.map(result => {
         const item = {
             id: result.id,
@@ -39,6 +42,7 @@ const formatData = (data) => {
         }
         formattedData.items.push(item);
     });
+    
     return formattedData;
 }
 

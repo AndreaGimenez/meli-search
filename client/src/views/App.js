@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from "react-router";
 import Header from '../components/header';
 import AppContent from '../components/app-content';
-import SearchResults from '../components/search-results';
+import ResultsContainer from '../components/results-container';
 import ProductDetail from '../components/product-detail';
 import styles from '../sass/app.module.scss'
 
@@ -14,7 +14,7 @@ const App = ()  => {
                 <Switch>
                     <Route exact path="/"/>
                     <Route path="/items">
-                        <SearchResults />
+                        <ResultsContainer />
                     </Route>
                     <Route path="/items/:id">
                         <ProductDetail />

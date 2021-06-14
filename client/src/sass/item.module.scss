@@ -1,0 +1,29 @@
+@import "./variables";
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    border-bottom: $border-bottom;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: $white;
+    padding: $gap-sm;
+    padding-left: 0;
+    border-radius: $border-radius-sm;
+}
+
+img {
+    width: $width;
+    height: $height;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: $border-radius-sm;
+}
+

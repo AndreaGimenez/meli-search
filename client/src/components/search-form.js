@@ -12,8 +12,6 @@ const SearchForm = () => {
         setSearchInput(event.target.value);
     }
 
-    
-
     const onSubmit = async (event) => {
         event.preventDefault();
         history.push(`${results_url}${searchInput}`);

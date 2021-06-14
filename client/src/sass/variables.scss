@@ -2,6 +2,7 @@
 $primary: #FFE600;
 $background: #EBEBEB;
 $primary-button: #3483FA;
+$white: #FFF;
 
 // Font
 $font-xs: 1.1rem;
@@ -16,6 +17,10 @@ $height-xs: 1.2rem;
 $height-sm: 1.5rem;
 $height-md: 2.5rem;
 
+//Widths
+$max-width: 1200px;
+$container-width: 70%;
+
 //gaps
 $gap-xs: 0.4rem;
 $gap-sm: 0.8rem;
@@ -24,5 +29,8 @@ $gap-lg: 3.2rem;
 $gap-xxxl: 10rem;
 $input-padding: 7px 60px 9px 15px;
 
-
+//images
+$width: 160px;
+$height: 160px;
+$border-bottom: thin solid #eee;
 $border-radius-sm: 4px;
