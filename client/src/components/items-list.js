@@ -9,7 +9,7 @@ const ItemsList = ({items}) => {
         <div className={styles.container}>
             <Breadcrumb/>
             <div className={styles.results}>
-                {items.map(item => <Item item={item} />)}
+                {items.map(item => <Item key={item.id} item={item} />)}
             </div>
         </div>
     )
