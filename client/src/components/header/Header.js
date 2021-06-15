@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchForm from './SearchForm';
+import SearchForm from '../form/SearchForm';
 import Logo from './Logo';
 import Navbar from './Navbar';
 
-import styles from '../sass/header.module.scss';
+import styles from '../../sass/header.module.scss';
 
 
 const Header = () => (

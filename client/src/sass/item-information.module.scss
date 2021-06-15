@@ -1,0 +1,60 @@
+@import "./variables";
+
+.container {
+    display: flex;
+    margin: $gap-md;
+}
+
+.columnLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    max-width: $max-column-width;
+
+    .image {
+        width: 100%;
+        max-height: 450px;
+        margin: $gap-md 0;
+    }
+    
+    img {
+        display: block;
+        width: 60%;
+        height: 100%;
+        margin: 0 auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: $border-radius-sm;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-weight: $bold;
+    }
+
+    .description {
+        margin: $gap-md;
+    }
+
+    .text {
+        color: $light-grey;
+        font-size: $font-xs;
+    }
+}
+
+.columnRight {
+    display: block;
+    flex: 1;
+
+    .subtitle {
+        & > span {
+            text-transform: capitalize;
+        }
+    }
+
+    .title {
+        
+    }
+    
+}

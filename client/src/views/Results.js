@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../sass/results-container.module.scss';
 
-const ResultsContainer = (props) => (
+const Results = (props) => (
     <div className={styles.container}>
         {props.children}
     </div>
 )
 
-export default ResultsContainer;
+export default Results;

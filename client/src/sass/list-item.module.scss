@@ -8,20 +8,28 @@
 }
 
 .wrapper {
-    width: 20%;
-}
+    display: flex;
 
-img {
-    width: $width;
-    height: $height;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: $border-radius-sm;
-    cursor: pointer;
+    & > img {
+        width: $image-width-desktop;
+        height: $image-height-desktop;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: $border-radius-sm;
+        cursor: pointer;
+        align-self: center;
+    
+        @media(width <= $break-mobile) {
+            width:  $image-width-mobile;
+            height:  $image-height-mobile;
+        }
+    }
 }
 
 .description {
+    display: flex;
+    flex-direction: column;
     border-collapse: collapse;
     -webkit-box-direction: normal;
     font-size: 16px;
@@ -32,9 +40,11 @@ img {
     -webkit-tap-highlight-color: transparent;
     list-style: none;
     box-sizing: border-box;
-    width: calc(100% - 208px);
-    display: flex;
-    flex-direction: column;
+    width: 75%;
+
+    @media(width <= $break-mobile) {
+        margin: 0 $gap-sm;
+    }
 }
 
 .container {
@@ -42,20 +52,15 @@ img {
     margin-top: $gap-sm;
 }
 
-.price {
-    font-size: $font-sm;
-}
-
 .title {
     display: flex;
     flex-direction: column;
-    font-size: $font-xs;
+    font-size: $font-sm;
     margin: $gap-sm 0;
 }
 
 .location {
-    width: 20%;
-    font-size: $font-xxs;
+    font-size: $font-xs;
     font-weight: $light;
     color: $light-grey;
     margin-top: $gap-md;

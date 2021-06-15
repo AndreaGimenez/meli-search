@@ -6,13 +6,13 @@ $white: #FFF;
 $light-grey: #999999;
 
 // Font
-$font-xxs: 0.8rem;
-$font-xs: 1rem;
-$font-sm: 1.3rem;
-$font-md: 1.6rem;
-$font-lg: 2rem;
+$font-xs: 0.8rem;
+$font-sm: 1rem;
+$font-md: 1.3rem;
+$font-lg: 1.6rem;
 $font-xl: 2.4rem;
 $light: 200;
+$bold: 400;
 
 //Height
 $header-height: 4.5rem;
@@ -23,6 +23,7 @@ $height-md: 2.5rem;
 //Widths
 $max-width: 1200px;
 $container-width: 70%;
+$max-column-width: 800px;
 
 //gaps
 $gap-xs: 0.4rem;
@@ -33,8 +34,10 @@ $gap-xxxl: 10rem;
 $input-padding: 7px 60px 9px 15px;
 
 //images
-$width: 160px;
-$height: 160px;
+$image-width-desktop: 160px;
+$image-height-desktop: 160px;
+$image-width-mobile: 80px;
+$image-height-mobile: 80px;
 $border-bottom: thin solid #eee;
 $border-radius-sm: 4px;
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Card from './Card';
-import {item_description_url} from '../constants';
-import styles from '../sass/item.module.scss';
+import Card from '../Card';
+import Price from '../Price';
+import {item_description_url} from '../../constants';
+import styles from '../../sass/list-item.module.scss';
 
-const Item = ({item}) => (
+const ListItem = ({item}) => (
     <Link 
         to={`${item_description_url}${item.id}`}
         className={styles.link}>
@@ -12,18 +13,20 @@ const Item = ({item}) => (
             <div className={styles.wrapper}>
                 <img src={item.picture} alt={`${item.name}`} />
             </div>
-            <ItemDescription item={item}/>
+            <ShortDescription item={item}/>
             <div className={styles.location}>{item.address.toLowerCase()}</div>
         </Card>
     </Link>
 );
 
-const ItemDescription = ({item}) => (
+const ShortDescription = ({item}) => (
     <div className={styles.description}>
         <div className={styles.container}>
-            <div className={styles.price}>
-                <span>$ </span>{item.price.amount}
-            </div>
+            <Price 
+                amount={item.price.amount}
+                currency={item.price.currency}
+                size="md"
+            />
             <div className={styles.title}>
                 {item.title}
             </div>
@@ -32,4 +35,4 @@ const ItemDescription = ({item}) => (
 )
 
 
-export default Item;
+export default ListItem;
