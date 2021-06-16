@@ -41,6 +41,7 @@
     list-style: none;
     box-sizing: border-box;
     width: 75%;
+    margin: 0 $gap-sm;
 
     @media(width <= $break-mobile) {
         margin: 0 $gap-sm;

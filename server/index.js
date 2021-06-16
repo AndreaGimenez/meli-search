@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 var cors = require('cors');
-const port = 5001 ;
+const port = 3001 ;
 
 app.use(cors());
 app.set('json spaces', 4);

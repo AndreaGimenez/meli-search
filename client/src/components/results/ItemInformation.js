@@ -1,6 +1,7 @@
 import React from 'react';
-import {productDescription, itemCondition} from "../../constants";
+import {productDescription, itemCondition, buttonLabel} from "../../constants";
 import Price from '../Price';
+import Button from '../Button';
 
 import styles from "../../sass/item-information.module.scss";
 
@@ -42,16 +43,19 @@ const Right = ({title, condition, price, soldQuantity}) => {
     return (
         <div className={styles.columnRight}>
             <div>
-                <div className={styles.subtitle}>
+                <h5 className={styles.subtitle}>
                     <span>{itemCondition[condition]}</span> - <span>{soldQuantity}</span> vendidos
-                </div>
-                <div className={styles.title}>{title}</div>
+                </h5>
+                <h2 className={styles.title}>{title}</h2>
             </div>
             <Price 
                 amount={price.amount}
                 currency={price.currency}
-                size="xl"
+                size="xxl"
             />
+            <div className={styles.button}>
+                <Button label={buttonLabel.buy} />
+            </div>
         </div>
     )
 }

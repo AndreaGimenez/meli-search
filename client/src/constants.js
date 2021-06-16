@@ -16,3 +16,7 @@ export const currencySymbols = {
     EUR: "€",
     USD: "U$S"
 }
+
+export const buttonLabel = {
+    buy: "Comprar",
+}

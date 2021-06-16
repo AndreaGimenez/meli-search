@@ -10,7 +10,7 @@ const getItemData = (data) => ({
     title: data.title,
     price: {
         currency: data.currency_id,
-        amount: data.price,
+        amount: Math.floor(data.price),
         decimals: getPriceDecimals(data.price, 2),
     },
     condition: data.condition,
