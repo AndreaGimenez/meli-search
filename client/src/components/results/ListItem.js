@@ -22,11 +22,15 @@ const ListItem = ({item}) => (
 const ShortDescription = ({item}) => (
     <div className={styles.description}>
         <div className={styles.container}>
-            <Price 
-                amount={item.price.amount}
-                currency={item.price.currency}
-                size="md"
-            />
+            <div className={styles.info}>
+                <Price 
+                    amount={item.price.amount}
+                    currency={item.price.currency}
+                    size="md"
+                    weight="light"
+                />
+                {item.free_shipping && <FreeShipping />}
+            </div>
             <div className={styles.title}>
                 {item.title}
             </div>
@@ -34,5 +38,6 @@ const ShortDescription = ({item}) => (
     </div>
 )
 
+const FreeShipping = () => <div className={styles.icon}/>
 
 export default ListItem;

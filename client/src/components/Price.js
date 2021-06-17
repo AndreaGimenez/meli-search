@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import styles from "../sass/price.module.scss";
 
 
-const Price = ({amount, decimals, currency, size="md"}) => (
-    <div className={classNames(styles.price, styles[`size-${size}`])}>
+const Price = ({amount, decimals, currency, size="md", weight="bold"}) => (
+    <div className={classNames(styles[`size-${weight}`], styles[`size-${size}`])}>
             {currencySymbols[currency]} {amount}{decimals}
     </div>
 );

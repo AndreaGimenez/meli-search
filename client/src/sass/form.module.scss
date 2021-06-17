@@ -29,3 +29,13 @@
     padding: $gap-xs;
     border-radius: 0 $border-radius-sm $border-radius-sm 0;
 }
+
+.icon {
+    height: $height-xs;
+    border-radius: $border-radius-sm;
+    background-image: url('../assets/search.png');
+    width: $icon-width;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

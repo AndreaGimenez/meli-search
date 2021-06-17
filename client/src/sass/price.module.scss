@@ -1,7 +1,11 @@
 @import "./variables";
 
-.price {
+.price-bold {
     font-weight: $bold;
+}
+
+.price-light {
+    font-weight: $light;
 }
 
 .size-sm {

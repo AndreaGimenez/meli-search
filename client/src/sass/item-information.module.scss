@@ -3,6 +3,10 @@
 .container {
     display: flex;
     margin: $gap-md;
+
+    @media (width <= $break-mobile) {
+        flex-direction: column-reverse;
+    }
 }
 
 .columnLeft {

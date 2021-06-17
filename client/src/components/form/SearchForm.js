@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import SearchIcon from './SearchIcon';
 import {searchPlaceholder, results_url} from '../../constants.js';
 import styles from '../../sass/form.module.scss';
 
@@ -8,6 +7,7 @@ import styles from '../../sass/form.module.scss';
 const SearchForm = () => {
     const [searchInput, setSearchInput] = useState(""); 
     const history = useHistory();
+    
     const handleInputChanged = (event) => { 
         setSearchInput(event.target.value);
     }
@@ -30,10 +30,12 @@ const SearchForm = () => {
             <button
                 type="submit"
                 className={styles.button}>
-                <SearchIcon/> 
+                <SearchIcon />
             </button>
         </form>
     );
 };
+
+const SearchIcon = () => <div className={styles.icon}/>
 
 export default SearchForm;

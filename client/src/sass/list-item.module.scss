@@ -30,14 +30,8 @@
 .description {
     display: flex;
     flex-direction: column;
-    border-collapse: collapse;
-    -webkit-box-direction: normal;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.35;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: transparent;
+    font-size: $font-sm;
+    font-weight: $light;
     list-style: none;
     box-sizing: border-box;
     width: 75%;
@@ -53,11 +47,16 @@
     margin-top: $gap-sm;
 }
 
+.info {
+    display: flex;
+    align-items: center;
+}
+
 .title {
     display: flex;
     flex-direction: column;
     font-size: $font-sm;
-    margin: $gap-sm 0;
+    margin: $gap-md 0;
 }
 
 .location {
@@ -66,4 +65,14 @@
     color: $light-grey;
     margin-top: $gap-md;
     text-transform: capitalize;
+}
+
+.icon {
+    height: $height-xs;
+    background-image: url('../assets/shipping.png');
+    width: $icon-width;
+    margin-left: $gap-xs;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
