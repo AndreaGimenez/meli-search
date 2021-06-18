@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from "react";
 import {useParams} from "react-router-dom";
 import useFetchItem from "../../hooks/use-fetch-item";
 import ResultLayout from "../results/ResultLayout";

@@ -5,7 +5,7 @@ export const item_description_url = "/items/";
 export const productDescription = "Descripción del producto";
 
 export const itemCondition = {
-    new: "nuevo", 
+    new: "nuevo",
     used: "usado"
 };
 
@@ -15,8 +15,8 @@ export const currencySymbols = {
     CLP: "$",
     EUR: "€",
     USD: "U$S"
-}
+};
 
 export const buttonLabel = {
     buy: "Comprar",
-}
+};

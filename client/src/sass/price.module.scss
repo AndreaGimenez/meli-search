@@ -1,5 +1,9 @@
 @import "./variables";
 
+.root {
+    display: flex;
+}
+
 .price-bold {
     font-weight: $bold;
 }
@@ -26,4 +30,8 @@
 
 .size-xxl {
     font-size: $font-xxl;
+}
+
+.decimals {
+    font-size: $font-xs;
 }

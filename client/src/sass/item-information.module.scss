@@ -1,6 +1,6 @@
 @import "./variables";
 
-.container {
+.box {
     display: flex;
     margin: $gap-md;
 
@@ -20,7 +20,7 @@
         max-height: 450px;
         margin: $gap-md 0;
     }
-    
+
     img {
         display: block;
         width: 60%;
@@ -67,4 +67,9 @@
     .button {
         margin: $gap-lg 0;
     }
+}
+
+.decimals {
+    font-size: $font-xs;
+    margin-top: $gap-xs;
 }

@@ -1,15 +1,15 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import Card from '../Card';
-import Price from '../Price';
-import {item_description_url} from '../../constants';
-import styles from '../../sass/list-item.module.scss';
+import React from "react";
+import {Link} from "react-router-dom";
+import Card from "../Card";
+import Price from "../Price";
+import {item_description_url} from "../../constants";
+import styles from "../../sass/list-item.module.scss";
 
 const ListItem = ({item}) => (
-    <Link 
+    <Link
         to={`${item_description_url}${item.id}`}
         className={styles.link}>
-        <Card>     
+        <Card>
             <div className={styles.wrapper}>
                 <img src={item.picture} alt={`${item.name}`} />
             </div>
@@ -19,13 +19,17 @@ const ListItem = ({item}) => (
     </Link>
 );
 
+const displayDecimals = (decimals) => decimals !== "00" ? <span className={styles.decimals}>{decimals}</span> : null;
+
 const ShortDescription = ({item}) => (
     <div className={styles.description}>
         <div className={styles.container}>
             <div className={styles.info}>
-                <Price 
+                <Price
                     amount={item.price.amount}
                     currency={item.price.currency}
+                    decimals={item.price.decimals}
+                    displayDecimals={displayDecimals}
                     size="md"
                     weight="light"
                 />
@@ -36,8 +40,8 @@ const ShortDescription = ({item}) => (
             </div>
         </div>
     </div>
-)
+);
 
-const FreeShipping = () => <div className={styles.icon}/>
+const FreeShipping = () => <div className={styles.icon} />
 
 export default ListItem;

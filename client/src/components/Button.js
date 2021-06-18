@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import styles from "../sass/button.module.scss";
 
@@ -8,7 +8,7 @@ export const Button = ({label, color}) => {
             className={styles.button}>
             {label}
         </button>
-    )
+    );
 }
 
 export default Button;

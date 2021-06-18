@@ -1,24 +1,26 @@
-const getPriceDecimals = (price, n) => (price - Math.trunc(price)).toFixed(n);
-
 const author = {
     name: "Andrea" ,
     lastname: "Giménez",
 };
+
+const NUMBER_PART = 0;
+const DECIMAL_PART = 1;
+
+const getPriceParts = (price, part) => price.toLocaleString("es-AR").split(",")[part];
 
 const getItemData = (data) => ({
     id: data.id,
     title: data.title,
     price: {
         currency: data.currency_id,
-        amount: Math.floor(data.price),
-        decimals: getPriceDecimals(data.price, 2),
+        amount: getPriceParts(data.price, NUMBER_PART),
+        decimals: getPriceParts(data.price, DECIMAL_PART),
     },
     condition: data.condition,
     free_shipping: data.shipping.free_shipping,
 });
 
 module.exports = {
-    getPriceDecimals,
     author,
     getItemData
-}
+};

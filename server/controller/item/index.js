@@ -1,6 +1,6 @@
-const {fetchData} = require('../fetch');
-const {parseItemByIdResult, parseDescription} = require('./parser');
-const {ITEM_BASE_URL} = require('../constants');
+const {fetchData} = require("../fetch");
+const {parseItemByIdResult, parseDescription} = require("./parser");
+const {ITEM_BASE_URL} = require("../constants");
 
 
 const getItemById = async (req, res) => {
@@ -15,4 +15,4 @@ const getItemById = async (req, res) => {
 
 module.exports = {
     getItemById
-}
+};

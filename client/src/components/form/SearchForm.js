@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom';
-import {searchPlaceholder, results_url} from '../../constants.js';
-import styles from '../../sass/form.module.scss';
+import React, {useState} from "react";
+import {useHistory} from "react-router-dom";
+import {searchPlaceholder, results_url} from "../../constants.js";
+import styles from "../../sass/form.module.scss";
 
 
 const SearchForm = () => {
-    const [searchInput, setSearchInput] = useState(""); 
+    const [searchInput, setSearchInput] = useState("");
     const history = useHistory();
-    
-    const handleInputChanged = (event) => { 
+
+    const handleInputChanged = (event) => {
         setSearchInput(event.target.value);
     }
 
@@ -16,10 +16,10 @@ const SearchForm = () => {
         event.preventDefault();
         history.push(`${results_url}${searchInput}`);
     }
-    
+
     return (
-        <form 
-            onSubmit={onSubmit} 
+        <form
+            onSubmit={onSubmit}
             className={styles.form}>
             <input
                 className={styles.input}

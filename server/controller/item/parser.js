@@ -1,4 +1,4 @@
-const {author, getItemData} = require('../utils');
+const {author, getItemData} = require("../utils");
 
 const parseItemByIdResult = (data) => {
     const item = getItemData(data);
@@ -8,7 +8,7 @@ const parseItemByIdResult = (data) => {
     return {
         author: {...author},
         item: {...item},
-    }
+    };
 };
 
 const parseDescription = (data) => {

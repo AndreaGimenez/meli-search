@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState} from "react";
 
 const useFetch = () => {
     const [response, setResponse] = useState([]);
@@ -11,8 +11,8 @@ const useFetch = () => {
             let responseData = await fetch(url, {
                 method,
                 body,
-                headers: { 
-                    'Content-Type': 'application/json' 
+                headers: {
+                    "Content-Type": "application/json"
                 }
             })
             responseData = await responseData.json();

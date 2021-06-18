@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 const fetchData = async (url, parse) => {
     try {
@@ -6,10 +6,10 @@ const fetchData = async (url, parse) => {
         response = await response.json();
         return parse(response);
     } catch(error){
-        res.send({error});
+        return {error};
     }
 };
 
 module.exports = {
     fetchData
-}
+};
