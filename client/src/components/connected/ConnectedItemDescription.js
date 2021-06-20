@@ -6,15 +6,15 @@ import ItemInformation from "../results/ItemInformation";
 
 
 const ConnectedItemDescription = () => {
-    const {fetchItemById, response, loading, error} = useFetchItem();
+    const {fetchItemById, response} = useFetchItem();
     const {id} = useParams();
     useEffect(() => fetchItemById(id), [id]);
-    
+
     if (!response.item) return null;
-    
+
     return (
-        <ResultLayout>
-            <ItemInformation data={response}/>
+        <ResultLayout categories={response.categories}>
+            <ItemInformation item={response.item} description={response.description}/>
         </ResultLayout>
     );
 }

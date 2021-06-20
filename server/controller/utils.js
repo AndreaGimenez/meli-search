@@ -18,6 +18,7 @@ const getItemData = (data) => ({
     },
     condition: data.condition,
     free_shipping: data.shipping.free_shipping,
+    category_id: data.category_id
 });
 
 module.exports = {

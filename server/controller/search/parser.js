@@ -3,7 +3,7 @@ const {author, getItemData} = require("../utils");
 const parseSearchResults = (data) => {
     const parsedData = {
         author: {...author},
-        categories: [],
+        categories: getCategory(data),
         items: [],
     };
 
@@ -17,6 +17,15 @@ const parseSearchResults = (data) => {
     return parsedData;
 }
 
+const getCategory = ({filters}) => {
+    let category = filterCategory(filters);
+    if (category) return category.values[0].path_from_root.map(parent => parent.name);
+    return [];
+}
+
+const filterCategory = (filters) => filters.find(available_filter => available_filter.id === "category");
+
+
 module.exports = {
-    parseSearchResults
+    parseSearchResults,
 };

@@ -6,8 +6,7 @@ import Button from "../Button";
 import styles from "../../sass/item-information.module.scss";
 
 
-const ItemInformation = ({data}) => {
-    const {item, description} = data;
+const ItemInformation = ({item, description}) => {
     const {picture, title, condition, price, sold_quantity} = item;
 
     return (

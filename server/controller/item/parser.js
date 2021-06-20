@@ -8,6 +8,7 @@ const parseItemByIdResult = (data) => {
     return {
         author: {...author},
         item: {...item},
+        categories: [],
     };
 };
 
@@ -15,7 +16,10 @@ const parseDescription = (data) => {
     return data.plain_text;
 }
 
+const parseCategory = (data) => data.path_from_root.map(parent => parent.name);
+
 module.exports = {
     parseItemByIdResult,
-    parseDescription
+    parseDescription,
+    parseCategory
 };

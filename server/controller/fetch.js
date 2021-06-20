@@ -6,7 +6,7 @@ const fetchData = async (url, parse) => {
         response = await response.json();
         return parse(response);
     } catch(error){
-        return {error};
+        return error;
     }
 };
 
