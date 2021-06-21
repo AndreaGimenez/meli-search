@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+.form {
+    display: flex;
+    width: 100%;
+    margin-left: $gap-md;
+
+    @media (width <= $break-mobile) {
+        margin: 0 $gap-xs;
+    }
+}
+
+.input {
+    font-size: $font-sm;
+    padding: $input-padding;
+    border-radius: $border-radius-sm 0 0 $border-radius-sm;;
+    height: $height-md;
+    border-collapse: collapse;
+    border: none;
+    box-sizing: border-box;
+    border: 0 rgba(0,0,0,.2);
+    width: 100%;
+    outline: 0;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    padding: $gap-xs;
+    border-radius: 0 $border-radius-sm $border-radius-sm 0;
+}
+
+.icon {
+    height: $height-xs;
+    border-radius: $border-radius-sm;
+    background-image: url('./search.png');
+    width: $icon-width;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

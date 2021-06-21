@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.logo {
+    background-image: url('./logo.png');
+    width: 60px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    
+    @media (width <= $break-mobile) {
+        width: 50px;
+    }
+}

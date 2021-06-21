@@ -1,0 +1,82 @@
+@import "../../styles/variables";
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: $border-bottom;
+    cursor: default;
+}
+
+.wrapper {
+    display: flex;
+
+    & > img {
+        width: $image-width-desktop;
+        height: $image-height-desktop;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: $border-radius-sm;
+        cursor: pointer;
+        align-self: center;
+    
+        @media(width <= $break-mobile) {
+            width:  $image-width-mobile;
+            height:  $image-height-mobile;
+        }
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-sm;
+    font-weight: $light;
+    list-style: none;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 0 $gap-sm;
+
+    @media(width <= $break-mobile) {
+        margin: 0 $gap-sm;
+    }
+}
+
+.container {
+    cursor: pointer;
+    margin-top: $gap-sm;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-sm;
+    margin: $gap-md 0;
+}
+
+.location {
+    font-size: $font-xs;
+    font-weight: $light;
+    color: $light-grey;
+    margin-top: $gap-md;
+    text-transform: capitalize;
+}
+
+.icon {
+    height: $height-xs;
+    background-image: url('./shipping.png');
+    width: $icon-width;
+    margin-left: $gap-xs;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.decimals {
+    font-size: $font-xs;
+}

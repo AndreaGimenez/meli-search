@@ -2,8 +2,8 @@ import React, {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import useFetchItems from "../../hooks/use-fetch-items";
 import {getQueryStringParam} from "../../utils.js";
-import ResultLayout from "../results/ResultLayout";
-import List from "../results/List";
+import ResultLayout from "../result-layout";
+import List from "../list";
 
 const ConnectedItems = () => {
     const {fetchItems, response} = useFetchItems();

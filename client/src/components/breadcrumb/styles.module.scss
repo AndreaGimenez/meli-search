@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.color {
+    color: $light-grey;
+    font-size: $gap-sm;
+    margin: $gap-sm 0;
+
+    & > span > span {
+        margin: 0 $gap-xs;
+    }
+
+    & > span:last-child > span{
+        display: none;
+    }
+}

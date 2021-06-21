@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import {useParams} from "react-router-dom";
 import useFetchItem from "../../hooks/use-fetch-item";
-import ResultLayout from "../results/ResultLayout";
-import ItemInformation from "../results/ItemInformation";
+import ResultLayout from "../result-layout";
+import ItemInformation from "../item-information";
 
 
 const ConnectedItemDescription = () => {

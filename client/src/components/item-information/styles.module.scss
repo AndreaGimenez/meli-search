@@ -1,0 +1,75 @@
+@import "../../styles/variables";
+
+.box {
+    display: flex;
+    margin: $gap-md;
+
+    @media (width <= $break-mobile) {
+        flex-direction: column-reverse;
+    }
+}
+
+.columnLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    max-width: $max-column-width;
+
+    .image {
+        width: 100%;
+        max-height: 450px;
+        margin: $gap-md 0;
+    }
+
+    img {
+        display: block;
+        width: 60%;
+        height: 100%;
+        margin: 0 auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: $border-radius-sm;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-weight: $bold;
+    }
+
+    .description {
+        margin: $gap-md;
+    }
+
+    .text {
+        color: $light-grey;
+        font-size: $font-xs;
+    }
+}
+
+.columnRight {
+    display: block;
+    flex: 1;
+
+    .subtitle {
+        font-weight: $light;
+        margin: $gap-sm 0;
+
+        & > span {
+            text-transform: capitalize;
+        }
+    }
+
+    .title {
+        font-weight: $bolder;
+    }
+
+    .button {
+        margin: $gap-lg 0;
+    }
+}
+
+.decimals {
+    font-size: $font-xs;
+    margin-top: $gap-xs;
+}

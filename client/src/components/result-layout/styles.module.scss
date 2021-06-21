@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+.container {
+    width: 100%;
+    height: auto;
+    max-width: $max-width;
+    align-self: center;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    padding: $gap-sm; 
+    padding-top: 0;
+}

@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    @media (width <= $break-mobile) {
+        padding: $gap-xs;
+    }
+}
