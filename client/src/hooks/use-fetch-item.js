@@ -1,17 +1,10 @@
-import {useCallback} from "react";
 import useFetch from "./use-fetch";
 import {BASE_URL} from "../constants.js";
 
-const useFetchItem = () => {
-    const {sendRequest, response, error, loading} = useFetch();
-
-    const fetchItemById = useCallback((q) => {
-        const url = `${BASE_URL}/${q}`;
-        sendRequest(url, "GET");
-    }, [sendRequest]);
+const useFetchItem = (id) => {
+    const {response, error, loading} = useFetch(`${BASE_URL}/${id}`);
 
     return {
-        fetchItemById,
         response,
         error,
         loading

@@ -17,6 +17,7 @@
 
     .image {
         width: 100%;
+        min-height: 30%;
         max-height: $image-width;
         margin: $gap-md 0;
     }
