@@ -6,37 +6,35 @@ import Button from "../button";
 import styles from "./styles.module.scss";
 
 
-const ItemInformation = ({item, description}) => {
-    const {picture, title, condition, price, sold_quantity} = item;
-
-    return (
-        <div className={styles.box}>
-            <Left
-                picture={picture}
-                title={title}
-                description={description}
-            />
-            <Right
-                title={title}
-                condition={condition}
-                price={price}
-                soldQuantity={sold_quantity}
-            />
-        </div>
-    );
-};
+const ItemInformation = ({item, description}) => (
+    <div className={styles.box}>
+        <Left
+            {...item}
+            description={description}
+        />
+        <Right {...item}/>
+    </div>
+);
 
 const Left = ({picture, title, description}) => (
     <div className={styles.columnLeft}>
-        <div className={styles.image}>
-            <img src={picture} alt={`${title}`}/>
-        </div>
+        <LeftImage picture={picture} title={title} />
         {description && (
-            <div className={styles.description}>
-                <h2 className={styles.title}>{productDescription}</h2>
-                <p className={styles.text}>{description}</p>
-            </div>
+            <LeftDescription description={description} />
         )}
+    </div>
+);
+
+const LeftImage = ({picture, title}) => (
+    <div className={styles.image}>
+        <img src={picture} alt={`${title}`}/>
+    </div>
+);
+
+const LeftDescription = ({description}) => (
+    <div className={styles.description}>
+        <h2 className={styles.title}>{productDescription}</h2>
+        <p className={styles.text}>{description}</p> 
     </div>
 );
 
@@ -44,12 +42,11 @@ const displayDecimals = (decimals) => <span className={styles.decimals}>{decimal
 
 const Right = ({title, condition, price, soldQuantity}) => (
     <div className={styles.columnRight}>
-        <div>
-            <h5 className={styles.subtitle}>
-                <span>{itemCondition[condition]}</span> - <span>{soldQuantity}</span> vendidos
-            </h5>
-            <h2 className={styles.title}>{title}</h2>
-        </div>
+        <RightHeader 
+            condition={condition} 
+            soldQuantity={soldQuantity} 
+            title={title}
+        />
         <Price
             amount={price.amount}
             decimals={price.decimals}
@@ -59,9 +56,17 @@ const Right = ({title, condition, price, soldQuantity}) => (
         />
         <div className={styles.button}>
             <Button label={buttonLabel.buy} />
-        </div>
+        </div> 
     </div>
 );
 
+const RightHeader = ({condition, soldQuantity, title}) => (
+    <div>
+        <h5 className={styles.subtitle}>
+            <span>{itemCondition[condition]}</span> - <span>{soldQuantity}</span> vendidos
+        </h5>
+        <h2 className={styles.title}>{title}</h2>
+    </div>
+);
 
 export default ItemInformation;

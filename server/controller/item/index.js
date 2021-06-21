@@ -5,19 +5,20 @@ const {ITEM_BASE_URL} = require("../constants");
 
 
 const getItemById = async (req, res) => {
-    const id = req.params.id;
+    const {id} = req.params;
 
-    const item_url = `${ITEM_BASE_URL}${id}`;
-    const description_url = `${item_url}/description`;
+    const itemUrl = `${ITEM_BASE_URL}${id}`;
+    const descriptionUrl = `${itemUrl}/description`; 
 
-    const data = await fetchData(item_url, parseItemByIdResult);
-    const description = await fetchData(description_url, parseDescription);
-
+    const data = await fetchData(itemUrl, parseItemByIdResult);
+    const description = await fetchData(descriptionUrl, parseDescription);
     const categories = await getCategoryById(data.item.category_id);
-    data["description"] = description;
-    data["categories"] = categories;
 
-    res.send(data);
+    res.send({
+        ...data,
+        description,
+        categories
+    });
 };
 
 module.exports = {

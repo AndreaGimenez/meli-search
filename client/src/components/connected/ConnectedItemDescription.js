@@ -8,13 +8,17 @@ import ItemInformation from "../item-information";
 const ConnectedItemDescription = () => {
     const {fetchItemById, response} = useFetchItem();
     const {id} = useParams();
-    useEffect(() => fetchItemById(id), [id]);
+    useEffect(() => fetchItemById(id), [id]); //## por que el fetch esta diferido?
 
-    if (!response.item) return null;
+    if (!response.item) {
+        return null;
+    }
+
+    const { categories, item, description } = response;
 
     return (
-        <ResultLayout categories={response.categories}>
-            <ItemInformation item={response.item} description={response.description}/>
+        <ResultLayout categories={categories}>
+            <ItemInformation item={item} description={description}/> 
         </ResultLayout>
     );
 }

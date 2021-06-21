@@ -8,13 +8,14 @@ import List from "../list";
 const ConnectedItems = () => {
     const {fetchItems, response} = useFetchItems();
     const search = getQueryStringParam(useLocation(), "search");
-    useEffect(() => fetchItems(search), [search]);
+    useEffect(() => fetchItems(search), [search]); //## por que fetch diferido?
+    const {items, categories} = response;
 
-    if (!response.items) return null;
+    if (!items) return null;
 
     return (
-        <ResultLayout  categories={response.categories}>
-            <List items={response.items} />
+        <ResultLayout  categories={categories}>
+            <List items={items} /> 
         </ResultLayout>
     );
 }

@@ -14,7 +14,7 @@ const SearchForm = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        history.push(`${results_url}${searchInput}`);
+        history.push(`${results_url}${searchInput}`); 
     }
 
     return (

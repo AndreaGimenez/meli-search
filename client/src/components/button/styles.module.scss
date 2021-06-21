@@ -3,9 +3,9 @@
 .button {
     background-color: $button-primary;
     color: $white;
-    padding: 0 24px;
-    height: 48px;
-    border-radius: 6px;
+    padding: $button-padding;
+    height: $button-height;
+    border-radius: $border-radius-md;
     border-color: transparent;
     font-size: $font-sm;
     font-weight: $bolder;

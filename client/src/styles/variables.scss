@@ -23,6 +23,7 @@ $header-height: 4.5rem;
 $height-xs: 1.2rem;
 $height-sm: 1.5rem;
 $height-md: 2.5rem;
+$button-height: 48px;
 
 //Widths
 $max-width: 1200px;
@@ -37,14 +38,17 @@ $gap-md: 1.6rem;
 $gap-lg: 3.2rem;
 $gap-xxxl: 10rem;
 $input-padding: 7px 60px 9px 15px;
+$button-padding: 0 24px;
 
 //images
+$image-width: 450px;
 $image-width-desktop: 160px;
 $image-height-desktop: 160px;
 $image-width-mobile: 80px;
 $image-height-mobile: 80px;
 $border-bottom: thin solid #eee;
 $border-radius-sm: 4px;
+$border-radius-md: 6px;
 
 //Devices
 $break-mobile: 812px;
