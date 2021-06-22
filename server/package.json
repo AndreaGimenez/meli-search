@@ -9,7 +9,6 @@
     "server": "node index.js",
     "server-dependencies": "npm install",
     "client-dependencies": "cd ../client && npm install",
-    "install-all-dependencies": "concurrently \"npm run server-dependencies\" \"npm run client-dependencies\""
   },
   "proxy": "http://localhost:3001",
   "author": "",
